@@ -84,19 +84,9 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 runtime ./plug.vim
 runtime ./maps.vim
 
-" True color
-if exists("&termguicolors") && exists("&winblend")
-  syntax enable
-  set termguicolors
-  set winblend=0
-  set wildoptions=pum
-  set pumblend=5
-  set background=dark
-  " Use NeoSolarized
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
-endif
+" Theme vim script
+let g:tokyonight_style = "storm"
+colorscheme tokyonight
 
 " Extra
 set exrc

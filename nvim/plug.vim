@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'groenewege/vim-less', { 'for': 'less'}
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee'}
+Plug 'folke/tokyonight.nvim', { 'branch': 'main'}
 
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'
