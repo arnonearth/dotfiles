@@ -5,6 +5,7 @@ format = "$battery$all$directory$character"
 [aws]
 format = 'aws[$symbol($profile )(\[$region\] )]($style)'
 style = "italic bold blue"
+disabled = true
 
 [aws.region_aliases]
 ap-southeast-1 = "sg"
@@ -30,7 +31,7 @@ format = " ⏱  [$duration]($style)"
 style = "italic bold yellow"
 
 [directory]
-truncation_length = 8
+truncation_length = 1
 truncation_symbol = "…/"
 read_only = "🔍"
 style = "italic bold cyan"
@@ -39,6 +40,7 @@ style = "italic bold cyan"
 symbol = "⛅ "
 format = "G[$symbol$account]($style)"
 style = "italic bold blue"
+disabled = true
 
 [git_branch]
 symbol = "🌱 "
@@ -57,6 +59,13 @@ staged = " 🪶  "
 renamed = "👶🏻"
 deleted = "🗑️"
 up_to_date = "✨"
+
+[status]
+style = "bg:blue"
+symbol = "🔴"
+format = '[\[$symbol $common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
 
 [username]
 style_user = "bold bright-purple"
