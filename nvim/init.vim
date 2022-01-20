@@ -84,9 +84,8 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 runtime ./plug.vim
 runtime ./maps.vim
 
-" Theme vim script
-let g:tokyonight_style = "storm"
-colorscheme tokyonight
+" Imports Colors
+runtime ./colors.vim
 
 " Extra
 set exrc

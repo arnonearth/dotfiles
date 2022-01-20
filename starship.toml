@@ -1,17 +1,66 @@
 add_newline = true
 
+format = "$battery$all$directory$character"
+
+[aws]
+format = 'aws[$symbol($profile )(\[$region\] )]($style)'
+style = "italic bold blue"
+
+[aws.region_aliases]
+ap-southeast-1 = "sg"
+us-east-1 = "va"
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 30
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
 [character]
 success_symbol = "🚀 "
 
+[cmd_duration]
+format = " ⏱  [$duration]($style)"
+style = "italic bold yellow"
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+read_only = "🔍"
+style = "italic bold cyan"
+
+[gcloud]
+symbol = "⛅ "
+format = "G[$symbol$account]($style)"
+style = "italic bold blue"
+
+[git_branch]
+symbol = "🌱 "
+format = '[$symbol$branch ]($style)'
+style = "italic bold yellow"
+
 [git_status]
-conflicted = "🏳 "
-ahead = "🏎💨"
-behind = "😰"
-diverged = "😵"
-untracked = "🤷"
+conflicted = "🏮"
+ahead = "🎠"
+behind = "🐢"
+diverged = "🌿"
+untracked = "🏃"
 stashed = "📦"
-modified = "📝"
-staged = "➕"
-renamed = "👅"
-deleted = "🗑"
-show_sync_count = true
+modified = "🔧"
+staged = " 🪶  "
+renamed = "👶🏻"
+deleted = "🗑️"
+up_to_date = "✨"
+
+[username]
+style_user = "bold bright-purple"
+style_root = "bold red"
+format = "[👟 $user ]($style)"
+disabled = false
+show_always = true
