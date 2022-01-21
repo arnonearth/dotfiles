@@ -24,11 +24,6 @@ local on_attach = function(client, bufnr)
 
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 
-  -- Formatting
-  if client.name == 'tsserver' then
-    client.resolved_capabilities.document_formatting = false
-  end
-
   if client.resolved_capabilities.document_formatting then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
@@ -72,14 +67,10 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-lspconfig.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
 lspconfig.tsserver.setup{
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
+  capabilities = capabilities,
 }
 
 lspconfig.diagnosticls.setup {
