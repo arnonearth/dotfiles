@@ -80,6 +80,8 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
+autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
+
 " Imports
 runtime ./plug.vim
 runtime ./maps.vim

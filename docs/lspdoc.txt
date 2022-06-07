@@ -1,0 +1,3 @@
+In a node project installing (via npm i) "eslint", "eslint-config-next", and "prettier" in devDependencies
+
+Then creating prettier.config.js, .eslintrc.json, .prettierignore, and next.config.js in preconfiguredf root directory (.git)

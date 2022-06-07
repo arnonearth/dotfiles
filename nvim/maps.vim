@@ -1,5 +1,9 @@
 " Description: Keymaps
 
+" Insert Mode map
+" Ctrl+o for directly insert new line under the current line
+imap <C-o> <esc>o
+
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d

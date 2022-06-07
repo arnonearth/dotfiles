@@ -16,6 +16,8 @@ if has("nvim")
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
   Plug 'L3MON4D3/LuaSnip'
   Plug 'onsails/lspkind-nvim'
   Plug 'hoob3rt/lualine.nvim'
@@ -29,6 +31,15 @@ if has("nvim")
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', {'do': ':UpdateRemotePlugins' }
   Plug 'kyazdani42/nvim-web-devicons'
+
+  Plug 'ray-x/go.nvim'
+  Plug 'ray-x/guihua.lua'
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'rcarriga/nvim-dap-ui'
+  Plug 'theHamsta/nvim-dap-virtual-text'
+
+  Plug 'cuducos/yaml.nvim'
+
 endif
 
 call plug#end()
