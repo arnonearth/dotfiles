@@ -17,3 +17,9 @@ starship init fish | source
 
 # Adding $GOPATH/bin
 fish_add_path $GOPATH/bin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /Users/arnons/miniforge3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
